@@ -243,7 +243,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 994659165}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4441175, y: 7.3950396, z: -18.628645}
+  m_LocalPosition: {x: 0.02, y: 7, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2036056622}
@@ -387,8 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a65ec8340152a04480f5f35cbb8f786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensivityVertical: 9
-  sensivityHorizontal: 9
+  sensivityVertical: 5
+  sensivityHorizontal: 5
   minimumVertical: -45
   maximumVertical: 45
 --- !u!114 &2036056621
@@ -402,8 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630f1a8173666bc488d03cde8c2d7ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 0
-  speed: 6
+  speed: 25
 --- !u!4 &2036056622
 Transform:
   m_ObjectHideFlags: 0
@@ -411,7 +410,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036056619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4441175, y: -1.2550397, z: 0.90864563}
+  m_LocalPosition: {x: -1, y: -1, z: 0.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 994659170}
@@ -429,8 +428,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 0
+  m_Radius: 8
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08

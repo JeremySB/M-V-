@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour {
 
-    public float sensivityVertical = 9.0f;
-    public float sensivityHorizontal = 9.0f;
+    public float sensivityVertical = 5.0f;
+    public float sensivityHorizontal = 5.0f;
 
     public float minimumVertical = -45.0f;
     public float maximumVertical = 45.0f;
@@ -19,10 +19,17 @@ public class MouseLook : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        rotationX -= Input.GetAxis("Mouse Y") * sensivityVertical;
-        rotationX = Mathf.Clamp(rotationX, minimumVertical, maximumVertical);
-        float delta = Input.GetAxis("Mouse X") * sensivityHorizontal;
-        float rotationY = transform.localEulerAngles.y + delta;
-        transform.localEulerAngles = new Vector3(rotationX, rotationY, 0);
+        //rotationX -= Input.GetAxis("Mouse Y") * sensivityVertical;
+        //rotationX = Mathf.Clamp(rotationX, minimumVertical, maximumVertical);
+        float deltaX = -Input.GetAxis("Mouse Y") * sensivityVertical;
+        float rotationX = transform.localEulerAngles.x + deltaX;
+
+        // uses left and right arrows
+        float deltaY = Input.GetAxis("Horizontal") * sensivityHorizontal;
+
+        float deltaZ = -Input.GetAxis("Mouse X") * sensivityHorizontal;
+        //float rotationY = transform.localEulerAngles.y + deltaY;
+        //transform.localEulerAngles = new Vector3(rotationX, rotationY, 0);
+        transform.Rotate(deltaX, deltaY, deltaZ);
     }
 }
