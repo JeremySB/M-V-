@@ -33,3 +33,4 @@ public class MouseLook : MonoBehaviour
         transform.RotateAround(ship.position, transform.right, deltaX);
     }
 }
+
