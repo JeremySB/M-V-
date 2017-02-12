@@ -355,6 +355,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f8be63edd520032488cf5b981351615d, type: 3}
+      propertyPath: m_Name
+      value: Ship
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8be63edd520032488cf5b981351615d, type: 3}
   m_IsPrefabParent: 0
@@ -382,15 +386,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036056619}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a65ec8340152a04480f5f35cbb8f786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensivityVertical: 5
-  sensivityHorizontal: 5
-  minimumVertical: -45
-  maximumVertical: 45
 --- !u!114 &2036056621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,3 +435,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2048524657 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: f8be63edd520032488cf5b981351615d, type: 3}
+  m_PrefabInternal: {fileID: 2000808067}
+--- !u!114 &2048524661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048524657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c7c73789e2c5344b539132402bf470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivityPitch: 5
+  sensitivityYaw: 5
+  sensitivityRoll: 3
