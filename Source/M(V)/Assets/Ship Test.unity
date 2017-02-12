@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 994659168}
   - component: {fileID: 994659167}
   - component: {fileID: 994659166}
+  - component: {fileID: 994659171}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -249,6 +250,18 @@ Transform:
   m_Father: {fileID: 2036056622}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &994659171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 994659165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a65ec8340152a04480f5f35cbb8f786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivityCamera: 5
 --- !u!1 &1094991209
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +384,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2036056622}
   - component: {fileID: 2036056621}
-  - component: {fileID: 2036056620}
   - component: {fileID: 2036056623}
   m_Layer: 0
   m_Name: Player
@@ -380,17 +392,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2036056620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2036056619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a65ec8340152a04480f5f35cbb8f786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2036056621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
+  sensitivityRoll: 3
 --- !u!4 &2036056622
 Transform:
   m_ObjectHideFlags: 0
@@ -429,12 +431,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 0
-  m_Radius: 8
+  m_Radius: 10
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -1}
 --- !u!1 &2048524657 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: f8be63edd520032488cf5b981351615d, type: 3}
@@ -452,4 +454,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityPitch: 5
   sensitivityYaw: 5
-  sensitivityRoll: 3
