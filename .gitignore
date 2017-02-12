@@ -1,12 +1,12 @@
 # Unity & Visual Studio gitignores added
 
 
-/*/*/[Ll]ibrary/
-/*/*/[Tt]emp/
-/*/*/[Oo]bj/
-/*/*/[Bb]uild/
-/*/*/[Bb]uilds/
-/*/*/Assets/AssetStoreTools*
+/Source/M(V)/[Ll]ibrary/
+/Source/M(V)/[Tt]emp/
+/Source/M(V)/[Oo]bj/
+/Source/M(V)/[Bb]uild/
+/Source/M(V)/[Bb]uilds/
+/Source/M(V)/Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
 **/.vs/
@@ -93,7 +93,6 @@ artifacts/
 *_p.c
 *_i.h
 *.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
