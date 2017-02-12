@@ -29,8 +29,13 @@ public class MouseLook : MonoBehaviour
         float deltaX = -Input.GetAxis("Mouse Y") * sensitivityCamera;
         float deltaY = Input.GetAxis("Mouse X") * sensitivityCamera;
 
-        transform.RotateAround(ship.position, ship.up, deltaY);
+        transform.RotateAround(ship.position, transform.up, deltaY);
         transform.RotateAround(ship.position, transform.right, deltaX);
+    }
+
+    void LateUpdate()
+    {
+        transform.LookAt(ship);
     }
 }
 

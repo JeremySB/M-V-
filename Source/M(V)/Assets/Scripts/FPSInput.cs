@@ -11,8 +11,8 @@ using UnityEngine;
 
 public class FPSInput : MonoBehaviour {
 
-    public float speed = 25.0f;
-    public float sensitivityRoll = 3.0f;
+    public float speed = 40.0f;
+    
 
     CharacterController characterController;
     Transform ship;
@@ -21,16 +21,12 @@ public class FPSInput : MonoBehaviour {
 	void Start () {
         characterController = GetComponent<CharacterController>();
         
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         ship = transform.Find("Ship");
 
-        // roll
-        float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
-
-        transform.Rotate(0, 0, deltaZ);
 
         float thrust = Input.GetAxis("Thrust") * speed;
 

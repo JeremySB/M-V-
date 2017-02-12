@@ -12,6 +12,7 @@ public class ShipRotation : MonoBehaviour {
 
     public float sensitivityPitch = 4.0f;
     public float sensitivityYaw = 4.0f;
+    public float sensitivityRoll = 3.0f;
 
     CharacterController characterController;
 
@@ -28,8 +29,9 @@ public class ShipRotation : MonoBehaviour {
         // yaw
         float deltaY = Input.GetAxis("Horizontal") * sensitivityYaw;
 
-        // roll is in player control
+        // roll
+        float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
 
-        transform.Rotate(deltaX, deltaY, 0);
+        transform.Rotate(deltaX, deltaY, deltaZ);
 	}
 }

@@ -133,8 +133,8 @@ Terrain:
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 1
-  m_SplatMapDistance: 287
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
   m_DrawHeightmap: 1
@@ -147,7 +147,7 @@ Terrain:
   m_LegacyShininess: 0.078125
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.04096
+  m_ScaleInLightmap: 1
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!4 &71333109
 Transform:
@@ -403,8 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630f1a8173666bc488d03cde8c2d7ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  sensitivityRoll: 3
+  speed: 30
 --- !u!4 &2036056622
 Transform:
   m_ObjectHideFlags: 0
@@ -454,3 +453,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityPitch: 5
   sensitivityYaw: 5
+  sensitivityRoll: 3
