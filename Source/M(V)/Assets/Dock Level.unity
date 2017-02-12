@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16487247, g: 0.10864631, b: 0.22399879, a: 1}
+  m_IndirectSpecularColor: {r: 0.16488901, g: 0.10867707, b: 0.22397444, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1039039751, guid: 9af819a2bb9fb074aba5c3f1588de06d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -376,7 +376,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1039039751, guid: 9af819a2bb9fb074aba5c3f1588de06d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 679852969}
   - component: {fileID: 679852968}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Obstacle2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -444,7 +444,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1043321505, guid: 4fcd6f365561fe34ab6a20a7e206c1ff, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 824111913}
   - component: {fileID: 824111912}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Obstacle2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,7 +525,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1043321505, guid: 4fcd6f365561fe34ab6a20a7e206c1ff, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -587,7 +587,6 @@ GameObject:
   - component: {fileID: 879227350}
   - component: {fileID: 879227349}
   - component: {fileID: 879227348}
-  - component: {fileID: 879227352}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -675,7 +674,7 @@ GameObject:
   - component: {fileID: 1071749968}
   - component: {fileID: 1071749967}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Obstacle3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,7 +693,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: -1742318695, guid: 535f60f6804ede045936e0b4ea0f42ec, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -788,7 +787,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1039039751, guid: 9af819a2bb9fb074aba5c3f1588de06d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -994,7 +993,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1039039751, guid: 9af819a2bb9fb074aba5c3f1588de06d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1043,7 +1042,7 @@ GameObject:
   - component: {fileID: 1541892154}
   - component: {fileID: 1541892153}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Obstacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1062,7 +1061,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: 1043321505, guid: 4fcd6f365561fe34ab6a20a7e206c1ff, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1124,7 +1123,7 @@ GameObject:
   - component: {fileID: 1686710132}
   - component: {fileID: 1686710131}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Obstacle3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1143,7 +1142,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42b0e5e8694a1ea4ea628ad19e9975d6, type: 2}
+  - {fileID: -1742318695, guid: 535f60f6804ede045936e0b4ea0f42ec, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
