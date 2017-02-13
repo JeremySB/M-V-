@@ -11,8 +11,9 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
-    public float thrusterPower = 10.0f;
+    public float thrusterPower = 1.5f;
     public float maxSpeed = 200.0f;
+    public float brakeMultiplier = .95f;
     private Vector3 velocity = Vector3.zero;
 
     CharacterController characterController;
@@ -33,6 +34,10 @@ public class PlayerControl : MonoBehaviour {
 
         velocity += thrust * ship.forward;
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+
+        
+        if (Input.GetKey("x"))
+            velocity *= brakeMultiplier;
 
         Vector3 movement = velocity * Time.deltaTime;
         characterController.Move(movement);
