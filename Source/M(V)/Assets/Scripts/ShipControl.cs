@@ -8,7 +8,7 @@ using UnityEngine;
  * Attach to Ship object
  */
 
-public class ShipRotation : MonoBehaviour {
+public class ShipControl : MonoBehaviour {
 
     public float sensitivityPitch = 4.0f;
     public float sensitivityYaw = 4.0f;

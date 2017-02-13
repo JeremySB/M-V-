@@ -9,7 +9,7 @@ using UnityEngine;
  * Assumes "Ship" is a child
  */
 
-public class FPSInput : MonoBehaviour {
+public class PlayerControl : MonoBehaviour {
 
     public float speed = 40.0f;
     
@@ -20,12 +20,12 @@ public class FPSInput : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         characterController = GetComponent<CharacterController>();
-        
+        ship = transform.Find("Ship");
     }
 	
 	// Update is called once per frame
 	void Update () {
-        ship = transform.Find("Ship");
+        
 
 
         float thrust = Input.GetAxis("Thrust") * speed;
