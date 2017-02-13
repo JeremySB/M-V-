@@ -11,8 +11,9 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
-    public float speed = 40.0f;
-    
+    public float thrusterPower = 10.0f;
+    public float maxSpeed = 200.0f;
+    private Vector3 velocity = Vector3.zero;
 
     CharacterController characterController;
     Transform ship;
@@ -28,12 +29,12 @@ public class PlayerControl : MonoBehaviour {
         
 
 
-        float thrust = Input.GetAxis("Thrust") * speed;
+        float thrust = Input.GetAxis("Thrust") * thrusterPower;
 
-        Vector3 movement = thrust * ship.forward;
+        velocity += thrust * ship.forward;
+        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
 
-        movement = Vector3.ClampMagnitude(movement, speed);
-        movement *= Time.deltaTime;
+        Vector3 movement = velocity * Time.deltaTime;
         characterController.Move(movement);
 	}
 }
