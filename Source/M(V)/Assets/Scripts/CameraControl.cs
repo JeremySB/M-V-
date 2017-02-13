@@ -12,30 +12,62 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public float sensitivityCamera = 5.0f;
-
+    public float maxVertical = 80.0f;
+    public float minVertical = -80.0f;
+	public float sides = 90f;
+    public float rotationX = -30f;
+    public float rotationY = 0f;
+	public float rotationZ = 0f;
+	public float distFromShip = 2000f;
     Transform ship;
     
     // Use this for initialization
     void Start()
     {
-        ship = transform.parent.Find("Ship");
+        ship = transform.parent.parent.Find("Ship");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        float deltaX = -Input.GetAxis("Mouse Y") * sensitivityCamera;
-        float deltaY = Input.GetAxis("Mouse X") * sensitivityCamera;
-
-        transform.RotateAround(ship.position, transform.up, deltaY);
-        transform.RotateAround(ship.position, transform.right, deltaX);
     }
 
     void LateUpdate()
     {
-        transform.LookAt(ship);
+		
+		//Vector3 shipAngles = ship.localEulerAngles;
+
+		rotationX += -Input.GetAxis("Mouse Y") * sensitivityCamera;	
+		rotationY += Input.GetAxis("Mouse X") * sensitivityCamera;
+
+		rotationX = Mathf.Clamp(rotationX, minVertical, maxVertical);
+		rotationY = Mathf.Clamp (rotationY, -sides, sides);
+
+		Vector3 localRot = new Vector3 (rotationX, rotationY, 0);
+		this.transform.localEulerAngles = localRot;
+
+		Vector3 locAngle = new Vector3(rotationY, -rotationX, 90);
+		this.transform.localPosition = (new Vector3(0,-locAngle.y/3,Mathf.Abs(locAngle.x/3)) - (Vector3.Normalize (locAngle)* distFromShip));
+        
     }
+	/*void LateUpdate()
+	{
+		float oldRotationX = rotationX;
+		float deltaX = -Input.GetAxis("Mouse Y") * sensitivityCamera;
+		float deltaY = Input.GetAxis("Mouse X") * sensitivityCamera;
+
+		rotationX += deltaX;
+		rotationY += deltaY;
+
+		Vector3 shipRot = ship.eulerAngles;
+		Vector3 localRot = new Vector3 (-rotationX , -rotationY, 0);
+		this.transform.eulerAngles = shipRot + localRot;
+
+		Vector3 locAngle = new Vector3(-rotationY,rotationX, -shipRot.z);
+		this.transform.position = (ship.position - (Vector3.Normalize (locAngle) * distFromShip));
+
+
+	}*/
+
 }
 

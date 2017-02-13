@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour {
 
     CharacterController characterController;
     Transform ship;
+	//CameraControl cam;
 
 	// Use this for initialization
 	void Start () {
@@ -33,13 +34,22 @@ public class PlayerControl : MonoBehaviour {
         float thrust = Input.GetAxis("Thrust") * thrusterPower;
 
         velocity += thrust * ship.forward;
-        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+
 
         
-        if (Input.GetKey("x"))
+        if (Input.GetAxis("Brake")!=0)//Input.GetKey("x"))
             velocity *= brakeMultiplier;
+
+		float side = Input.GetAxis ("Side Thrust") * thrusterPower;
+
+		velocity += side * ship.right;
+
+		velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
 
         Vector3 movement = velocity * Time.deltaTime;
         characterController.Move(movement);
+
+		//if (Input.GetAxis ("Reset Camera")!=0)
+			// cam.ResetCamera();
 	}
 }
