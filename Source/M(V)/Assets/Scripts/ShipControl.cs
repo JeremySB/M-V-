@@ -24,10 +24,10 @@ public class ShipControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // pitch
-        float deltaX = Input.GetAxis("Vertical") * sensitivityPitch;
+        float deltaX = Input.GetAxis("Pitch") * sensitivityPitch;
 
         // yaw
-        float deltaY = Input.GetAxis("Horizontal") * sensitivityYaw;
+        float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
 
         // roll
         float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;

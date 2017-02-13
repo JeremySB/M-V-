@@ -37,8 +37,8 @@ public class CameraControl : MonoBehaviour
 		
 		//Vector3 shipAngles = ship.localEulerAngles;
 
-		rotationX += -Input.GetAxis("Mouse Y") * sensitivityCamera;	
-		rotationY += Input.GetAxis("Mouse X") * sensitivityCamera;
+		rotationX += -Input.GetAxis("Camera Y") * sensitivityCamera;	
+		rotationY += Input.GetAxis("Camera X") * sensitivityCamera;
 
 		rotationX = Mathf.Clamp(rotationX, minVertical, maxVertical);
 		rotationY = Mathf.Clamp (rotationY, -sides, sides);
