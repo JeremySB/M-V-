@@ -15,9 +15,9 @@ public class CameraControl : MonoBehaviour
     public float maxVertical = 80.0f;
     public float minVertical = -80.0f;
 	public float sides = 90f;
-    public float rotationX = -30f;
-    public float rotationY = 0f;
-	public float rotationZ = 0f;
+    public float rotationX = 20f;
+    public float rotationY = -10f;
+	//public float rotationZ = 0f;
 	public float distFromShip = 2000f;
     Transform ship;
     
@@ -47,7 +47,7 @@ public class CameraControl : MonoBehaviour
 		this.transform.localEulerAngles = localRot;
 
 		Vector3 locAngle = new Vector3(rotationY, -rotationX, 90);
-		this.transform.localPosition = (new Vector3(-locAngle.x/6,-locAngle.y/3,Mathf.Abs(locAngle.x/3)) - (Vector3.Normalize (locAngle)* distFromShip));
+		this.transform.localPosition = (new Vector3(-locAngle.x/6,-locAngle.y/3,Mathf.Abs(locAngle.x/3)-10) - (Vector3.Normalize (locAngle)* distFromShip));
         
     }
 	/*void LateUpdate()
