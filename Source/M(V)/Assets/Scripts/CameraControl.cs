@@ -47,7 +47,7 @@ public class CameraControl : MonoBehaviour
 		this.transform.localEulerAngles = localRot;
 
 		Vector3 locAngle = new Vector3(rotationY, -rotationX, 90);
-		this.transform.localPosition = (new Vector3(0,-locAngle.y/3,Mathf.Abs(locAngle.x/3)) - (Vector3.Normalize (locAngle)* distFromShip));
+		this.transform.localPosition = (new Vector3(-locAngle.x/6,-locAngle.y/3,Mathf.Abs(locAngle.x/3)) - (Vector3.Normalize (locAngle)* distFromShip));
         
     }
 	/*void LateUpdate()
