@@ -259,6 +259,7 @@ MonoBehaviour:
   rotationX: 0
   rotationY: 0
   distFromShip: 20
+  offset: 5
 --- !u!114 &114301793602164206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,7 +288,8 @@ MonoBehaviour:
   sensitivityPitch: 4
   sensitivityYaw: 4
   sensitivityRoll: 3
-  thrusterPower: 100000
+  thrusterPower: 50000
+  sideThrusterPower: 30000
   brakeMultiplier: 0.95
 --- !u!124 &124163386542375012
 Behaviour:

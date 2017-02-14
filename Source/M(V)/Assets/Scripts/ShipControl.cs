@@ -14,7 +14,8 @@ public class ShipControl : MonoBehaviour {
     public float sensitivityYaw = 4.0f;
     public float sensitivityRoll = 3.0f;
 
-    public float thrusterPower = 1.5f;
+    public float thrusterPower = 50000f;
+    public float sideThrusterPower = 30000f;
     public float brakeMultiplier = .95f;
 
     Rigidbody rb;
@@ -52,8 +53,11 @@ public class ShipControl : MonoBehaviour {
          * Thrust/forces
          */
 
-        float thrust = Input.GetAxis("Thrust") * thrusterPower;
-        rb.AddForce(thrust * transform.forward);
+        float forwardThrust = Input.GetAxis("Thrust") * thrusterPower;
+        rb.AddForce(forwardThrust * transform.forward);
+
+        float sideThrust = Input.GetAxis("Side Thrust") * sideThrusterPower;
+        rb.AddForce(sideThrust * transform.right);
 
         if (Input.GetAxis("Brake") != 0)
             rb.velocity *= brakeMultiplier;
