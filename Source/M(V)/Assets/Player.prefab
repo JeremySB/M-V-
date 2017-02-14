@@ -126,7 +126,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50000
   field of view: 60
   orthographic: 0
   orthographic size: 100
@@ -259,7 +259,7 @@ MonoBehaviour:
   rotationX: 0
   rotationY: 0
   distFromShip: 20
-  offset: 5
+  offset: 10
 --- !u!114 &114301793602164206
 MonoBehaviour:
   m_ObjectHideFlags: 1
