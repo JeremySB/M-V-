@@ -20,10 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4644629123260830}
   - component: {fileID: 114301793602164206}
-  - component: {fileID: 143299969781880536}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,6 +59,8 @@ GameObject:
   - component: {fileID: 23348860041584862}
   - component: {fileID: 95249711538067786}
   - component: {fileID: 114533125630465106}
+  - component: {fileID: 54455562792738068}
+  - component: {fileID: 64525533333528696}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -180,6 +181,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1833284844525864}
   m_Mesh: {fileID: 4300000, guid: f8be63edd520032488cf5b981351615d, type: 3}
+--- !u!54 &54455562792738068
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1833284844525864}
+  serializedVersion: 2
+  m_Mass: 500
+  m_Drag: 0.1
+  m_AngularDrag: 3
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &64525533333528696
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1833284844525864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: f8be63edd520032488cf5b981351615d, type: 3}
 --- !u!81 &81928987656532994
 AudioListener:
   m_ObjectHideFlags: 1
@@ -228,7 +258,6 @@ MonoBehaviour:
   sides: 90
   rotationX: 0
   rotationY: 0
-  rotationZ: 0
   distFromShip: 20
 --- !u!114 &114301793602164206
 MonoBehaviour:
@@ -236,7 +265,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001304370822506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 630f1a8173666bc488d03cde8c2d7ded, type: 3}
   m_Name: 
@@ -258,6 +287,8 @@ MonoBehaviour:
   sensitivityPitch: 4
   sensitivityYaw: 4
   sensitivityRoll: 3
+  thrusterPower: 100000
+  brakeMultiplier: 0.95
 --- !u!124 &124163386542375012
 Behaviour:
   m_ObjectHideFlags: 1
@@ -265,20 +296,3 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065687183097772}
   m_Enabled: 1
---- !u!143 &143299969781880536
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1001304370822506}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0
-  m_Radius: 8
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
