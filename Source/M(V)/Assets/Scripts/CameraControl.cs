@@ -19,7 +19,7 @@ public class CameraControl : MonoBehaviour
     public float rotationY = -10f;
 	//public float rotationZ = 0f;
 	public float distFromShip = 2000f;
-    public float offset = 100f;
+    public float offset = 0.0f;
     Transform ship;
     
     // Use this for initialization
@@ -27,6 +27,9 @@ public class CameraControl : MonoBehaviour
     {
         ship = transform.parent.parent.Find("Ship");
         //transform.localPosition = transform.localPosition + new Vector3(0, offset, 0);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -36,14 +39,15 @@ public class CameraControl : MonoBehaviour
 
     void LateUpdate()
     {
-		
-		//Vector3 shipAngles = ship.localEulerAngles;
+        Cursor.lockState = CursorLockMode.Locked;
 
-		rotationX += -Input.GetAxis("Camera Y") * sensitivityCamera;	
+        //Vector3 shipAngles = ship.localEulerAngles;
+
+        rotationX += -Input.GetAxis("Camera Y") * sensitivityCamera;	
 		rotationY += Input.GetAxis("Camera X") * sensitivityCamera;
 
 		rotationX = Mathf.Clamp(rotationX, minVertical, maxVertical);
-		rotationY = Mathf.Clamp (rotationY, -sides, sides);
+		rotationY = Mathf.Clamp (rotationY, -sides - offset, sides);
 
 		Vector3 localRot = new Vector3 (rotationX, rotationY, 0);
 		this.transform.localEulerAngles = localRot;
