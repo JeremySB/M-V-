@@ -43,8 +43,10 @@ public class CameraControl : MonoBehaviour
 
         //Vector3 shipAngles = ship.localEulerAngles;
 
+        // Camera look-around
+
         rotationX += -Input.GetAxis("Camera Y") * sensitivityCamera;	
-		rotationY += Input.GetAxis("Camera X") * sensitivityCamera;
+		rotationY += Input.GetAxis("Yaw") * sensitivityCamera;
 
 		rotationX = Mathf.Clamp(rotationX, minVertical, maxVertical);
 		rotationY = Mathf.Clamp (rotationY, -sides - offset, sides);
@@ -54,7 +56,13 @@ public class CameraControl : MonoBehaviour
 
 		Vector3 locAngle = new Vector3(rotationY, -rotationX, 90);
 		this.transform.localPosition = (new Vector3(-locAngle.x/6,-locAngle.y/3 + offset,Mathf.Abs(locAngle.x/3)-10) - (Vector3.Normalize (locAngle)* distFromShip));
-        
+
+        // Look at direction and then turn to it
+
+        // yaw
+        //float deltaY = Input.GetAxis("Yaw") * sensitivityCamera;
+
+
     }
 	/*void LateUpdate()
 	{
