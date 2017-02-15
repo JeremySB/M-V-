@@ -39,16 +39,20 @@ public class ShipControl : MonoBehaviour {
         */
 
         // move towards camera view
-        Vector3 temp = Vector3.zero; // SmoothDamp needs a ref vector3
-        Vector3 target = Vector3.SmoothDamp(transform.forward, mainCamera.forward, ref temp, turnSpeed);
-        transform.forward = target;
+        Quaternion target = Quaternion.Slerp(transform.rotation, mainCamera.rotation, turnSpeed);
+
+        Quaternion savedRotation = mainCamera.rotation;
+        transform.rotation = target;
+        mainCamera.rotation = savedRotation;
+
 
         // pitch
-        float deltaX = Input.GetAxis("Pitch") * sensitivityPitch;
+        //float deltaX = Input.GetAxis("Pitch") * sensitivityPitch;
+        float deltaX = 0;
 
         // yaw
-        float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
-        //float deltaY = 0;
+        //float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
+        float deltaY = 0;
 
         // roll
         float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;

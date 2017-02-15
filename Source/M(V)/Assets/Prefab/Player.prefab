@@ -255,9 +255,6 @@ MonoBehaviour:
   sensitivityCamera: 5
   maxVertical: 45
   minVertical: -45
-  sides: 90
-  rotationX: 0
-  rotationY: 0
   distFromShip: 20
   offset: 10
 --- !u!114 &114301793602164206
@@ -291,6 +288,7 @@ MonoBehaviour:
   thrusterPower: 50000
   sideThrusterPower: 30000
   brakeMultiplier: 0.95
+  turnSpeed: 0.05
 --- !u!124 &124163386542375012
 Behaviour:
   m_ObjectHideFlags: 1
