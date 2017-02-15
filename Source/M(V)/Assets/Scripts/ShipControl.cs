@@ -18,26 +18,41 @@ public class ShipControl : MonoBehaviour {
     public float sideThrusterPower = 30000f;
     public float brakeMultiplier = .95f;
 
+    public float turnSpeed = 0.1f;
+
     Rigidbody rb;
+
+    Transform mainCamera;
     
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
+        mainCamera = transform.GetChild(0);
 	}
 
     // Update is called once per frame
     void Update() {
 
         /*
-         * Rotations
-         */
+        * Rotations
+        */
+
+        // move towards camera view
+        Quaternion target = Quaternion.Slerp(transform.rotation, mainCamera.rotation, turnSpeed);
+
+        Quaternion savedRotation = mainCamera.rotation;
+        transform.rotation = target;
+        mainCamera.rotation = savedRotation;
+
 
         // pitch
-        float deltaX = Input.GetAxis("Pitch") * sensitivityPitch;
+        //float deltaX = Input.GetAxis("Pitch") * sensitivityPitch;
+        float deltaX = 0;
 
         // yaw
-        float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
+        //float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
+        float deltaY = 0;
 
         // roll
         float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
