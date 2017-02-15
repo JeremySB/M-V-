@@ -15,7 +15,7 @@ public class CameraControl : MonoBehaviour
     public float maxVertical = 80.0f;
     public float minVertical = -80.0f;
 	//public float rotationZ = 0f;
-	public float distFromShip = 2000f;
+	public float distFromShip = 30f;
     public float offset = 0.0f;
     Transform ship;
     
@@ -43,8 +43,12 @@ public class CameraControl : MonoBehaviour
         float deltaY = Input.GetAxis("Yaw") * sensitivityCamera;
 
         transform.Rotate(deltaX, deltaY, 0);
+
+        transform.position = (ship.position) - (transform.forward * distFromShip);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+        transform.Translate(new Vector3(0, 8, 0));
     }
-	/*void LateUpdate()
+    /*void LateUpdate()
 	{
 		float oldRotationX = rotationX;
 		float deltaX = -Input.GetAxis("Mouse Y") * sensitivityCamera;
