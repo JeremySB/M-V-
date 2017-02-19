@@ -55,10 +55,9 @@ public class ShipControl : MonoBehaviour {
         //float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
         float deltaY = 0;
 
-        // roll
-        float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
+        
 
-        transform.Rotate(deltaX, deltaY, deltaZ);
+        transform.Rotate(deltaX, deltaY, 0);
 
     }
 
@@ -77,6 +76,10 @@ public class ShipControl : MonoBehaviour {
 
         float vertThrust = Input.GetAxis("Vertical Thrust") * sideThrusterPower;
         rb.AddForce(vertThrust * transform.up);
+
+        // roll
+        float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
+        rb.AddTorque(transform.forward * deltaZ * sideThrusterPower);
 
         if (Input.GetAxis("Brake") != 0)
             rb.velocity *= brakeMultiplier;
