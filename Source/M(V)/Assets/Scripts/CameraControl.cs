@@ -16,7 +16,6 @@ public class CameraControl : MonoBehaviour
     public float minVertical = -80.0f;
 	//public float rotationZ = 0f;
 	public float distFromShip = 30f;
-    public float offset = 0.0f;
     Transform ship;
     
     // Use this for initialization
@@ -44,9 +43,9 @@ public class CameraControl : MonoBehaviour
 
         transform.Rotate(deltaX, deltaY, 0);
 
-        transform.position = (ship.position) - (transform.forward * distFromShip);
+        transform.position = (ship.position + ship.up * 10) - (transform.forward * distFromShip);
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
-        transform.Translate(new Vector3(0, 8, 0));
+        transform.Translate(new Vector3(0, 0, 0));
     }
     /*void LateUpdate()
 	{

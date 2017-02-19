@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4644629123260830}
-  - component: {fileID: 114301793602164206}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -194,7 +193,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!64 &64525533333528696
 MeshCollider:
@@ -255,22 +254,7 @@ MonoBehaviour:
   sensitivityCamera: 5
   maxVertical: 45
   minVertical: -45
-  distFromShip: 20
-  offset: 10
---- !u!114 &114301793602164206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1001304370822506}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 630f1a8173666bc488d03cde8c2d7ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrusterPower: 1.5
-  maxSpeed: 200
-  brakeMultiplier: 0.95
+  distFromShip: 30
 --- !u!114 &114533125630465106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,7 +270,7 @@ MonoBehaviour:
   sensitivityYaw: 4
   sensitivityRoll: 3
   thrusterPower: 50000
-  sideThrusterPower: 30000
+  sideThrusterPower: 40000
   brakeMultiplier: 0.95
   turnSpeed: 0.05
 --- !u!124 &124163386542375012

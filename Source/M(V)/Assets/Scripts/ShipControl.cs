@@ -44,6 +44,7 @@ public class ShipControl : MonoBehaviour {
         Quaternion savedRotation = mainCamera.rotation;
         transform.rotation = target;
         mainCamera.rotation = savedRotation;
+        
 
 
         // pitch
@@ -73,6 +74,9 @@ public class ShipControl : MonoBehaviour {
 
         float sideThrust = Input.GetAxis("Side Thrust") * sideThrusterPower;
         rb.AddForce(sideThrust * transform.right);
+
+        float vertThrust = Input.GetAxis("Vertical Thrust") * sideThrusterPower;
+        rb.AddForce(vertThrust * transform.up);
 
         if (Input.GetAxis("Brake") != 0)
             rb.velocity *= brakeMultiplier;
