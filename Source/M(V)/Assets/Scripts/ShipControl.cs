@@ -44,6 +44,7 @@ public class ShipControl : MonoBehaviour {
         Quaternion savedRotation = mainCamera.rotation;
         transform.rotation = target;
         mainCamera.rotation = savedRotation;
+        
 
 
         // pitch
@@ -54,10 +55,9 @@ public class ShipControl : MonoBehaviour {
         //float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
         float deltaY = 0;
 
-        // roll
-        float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
+        
 
-        transform.Rotate(deltaX, deltaY, deltaZ);
+        transform.Rotate(deltaX, deltaY, 0);
 
     }
 
@@ -73,6 +73,13 @@ public class ShipControl : MonoBehaviour {
 
         float sideThrust = Input.GetAxis("Side Thrust") * sideThrusterPower;
         rb.AddForce(sideThrust * transform.right);
+
+        float vertThrust = Input.GetAxis("Vertical Thrust") * sideThrusterPower;
+        rb.AddForce(vertThrust * transform.up);
+
+        // roll
+        float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
+        rb.AddTorque(transform.forward * deltaZ * sideThrusterPower);
 
         if (Input.GetAxis("Brake") != 0)
             rb.velocity *= brakeMultiplier;

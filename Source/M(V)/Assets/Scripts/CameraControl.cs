@@ -14,9 +14,9 @@ public class CameraControl : MonoBehaviour
     public float sensitivityCamera = 5.0f;
     public float maxVertical = 80.0f;
     public float minVertical = -80.0f;
-	//public float rotationZ = 0f;
+	public float heightAboveShip = 10f;
 	public float distFromShip = 30f;
-    public float offset = 0.0f;
+    public Renderer shipRenderer;
     Transform ship;
     
     // Use this for initialization
@@ -44,9 +44,35 @@ public class CameraControl : MonoBehaviour
 
         transform.Rotate(deltaX, deltaY, 0);
 
-        transform.position = (ship.position) - (transform.forward * distFromShip);
+        Vector3 cameraCenter = ship.position + ship.up * heightAboveShip;
+
+        // look for objects in the way of camera
+        RaycastHit hit;
+        float calcDistFromShip = distFromShip;
+
+        // check for objects between ship and camera's center point
+        if (Physics.Raycast(ship.position, ship.up, out hit) && hit.transform.tag != "Player")
+        {
+            cameraCenter = ship.position + ship.up * Mathf.Min(hit.distance, heightAboveShip);
+        }
+
+        // check for objects between point camera rotates around and actual camera
+        if (Physics.SphereCast(cameraCenter, 1.5f, -transform.forward, out hit, 400))
+        {
+            calcDistFromShip = Mathf.Min(hit.distance - 0.1f, distFromShip);
+
+            if(calcDistFromShip < 5)
+            {
+                shipRenderer.enabled = false;
+            } else
+            {
+                shipRenderer.enabled = true;
+            }
+        }
+
+        transform.position = cameraCenter - (transform.forward * calcDistFromShip);
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
-        transform.Translate(new Vector3(0, 8, 0));
+        transform.Translate(new Vector3(0, 0, 0));
     }
     /*void LateUpdate()
 	{
