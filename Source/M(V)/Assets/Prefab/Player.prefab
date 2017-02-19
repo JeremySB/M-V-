@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 64525533333528696}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +254,9 @@ MonoBehaviour:
   sensitivityCamera: 5
   maxVertical: 45
   minVertical: -45
+  heightAboveShip: 10
   distFromShip: 30
+  shipRenderer: {fileID: 23348860041584862}
 --- !u!114 &114533125630465106
 MonoBehaviour:
   m_ObjectHideFlags: 1
