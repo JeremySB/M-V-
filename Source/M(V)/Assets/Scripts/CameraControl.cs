@@ -14,7 +14,7 @@ public class CameraControl : MonoBehaviour
     public float sensitivityCamera = 5.0f;
     public float maxVertical = 80.0f;
     public float minVertical = -80.0f;
-	public float heightAboveShip = 10f;
+	public float heightAboveShip = 8f;
 	public float distFromShip = 30f;
     public Renderer shipRenderer;
     Transform ship;
@@ -72,26 +72,6 @@ public class CameraControl : MonoBehaviour
 
         transform.position = cameraCenter - (transform.forward * calcDistFromShip);
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
-        transform.Translate(new Vector3(0, 0, 0));
     }
-    /*void LateUpdate()
-	{
-		float oldRotationX = rotationX;
-		float deltaX = -Input.GetAxis("Mouse Y") * sensitivityCamera;
-		float deltaY = Input.GetAxis("Mouse X") * sensitivityCamera;
-
-		rotationX += deltaX;
-		rotationY += deltaY;
-
-		Vector3 shipRot = ship.eulerAngles;
-		Vector3 localRot = new Vector3 (-rotationX , -rotationY, 0);
-		this.transform.eulerAngles = shipRot + localRot;
-
-		Vector3 locAngle = new Vector3(-rotationY,rotationX, -shipRot.z);
-		this.transform.position = (ship.position - (Vector3.Normalize (locAngle) * distFromShip));
-
-
-	}*/
-
 }
 

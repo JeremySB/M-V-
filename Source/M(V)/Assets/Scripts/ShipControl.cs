@@ -14,8 +14,8 @@ public class ShipControl : MonoBehaviour {
     public float sensitivityYaw = 4.0f;
     public float sensitivityRoll = 3.0f;
 
-    public float thrusterPower = 50000f;
-    public float sideThrusterPower = 30000f;
+    public float thrusterPower = 80000f;
+    public float sideThrusterPower = 40000f;
     public float brakeMultiplier = .95f;
 
     public float turnSpeed = 0.1f;
@@ -44,20 +44,6 @@ public class ShipControl : MonoBehaviour {
         Quaternion savedRotation = mainCamera.rotation;
         transform.rotation = target;
         mainCamera.rotation = savedRotation;
-        
-
-
-        // pitch
-        //float deltaX = Input.GetAxis("Pitch") * sensitivityPitch;
-        float deltaX = 0;
-
-        // yaw
-        //float deltaY = Input.GetAxis("Yaw") * sensitivityYaw;
-        float deltaY = 0;
-
-        
-
-        transform.Rotate(deltaX, deltaY, 0);
 
     }
 
