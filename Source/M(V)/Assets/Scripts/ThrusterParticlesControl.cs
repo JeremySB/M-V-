@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThrusterParticlesControl : MonoBehaviour {
 
     private ParticleSystem particles;
+    public string AttachedAxis;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +14,7 @@ public class ThrusterParticlesControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetAxis("Thrust") > 0.01)
+        if(Input.GetAxis(AttachedAxis) > 0.01)
         {
             particles.Play();
         }
