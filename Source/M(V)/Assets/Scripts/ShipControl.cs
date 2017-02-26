@@ -22,13 +22,12 @@ public class ShipControl : MonoBehaviour {
 
     Rigidbody rb;
 
-    Transform mainCamera;
+    public Transform mainCamera;
     
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        mainCamera = transform.GetChild(0);
 	}
 
     // Update is called once per frame
@@ -37,6 +36,7 @@ public class ShipControl : MonoBehaviour {
         /*
         * Rotations
         */
+        
 
         // move towards camera view
         Quaternion target = Quaternion.Slerp(transform.rotation, mainCamera.rotation, turnSpeed);

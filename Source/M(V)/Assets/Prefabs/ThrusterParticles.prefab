@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8110e7f5f603eb24fb1ac8ff6e3a8da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttachedAxis: 
 --- !u!114 &114905526265122324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,12 +169,12 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1114339207
+  randomSeed: 1551450974
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
-      scalar: 0.3
+      scalar: 0.59
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -599,7 +600,7 @@ ParticleSystem:
     enabled: 1
     serializedVersion: 3
     rateOverTime:
-      scalar: 80
+      scalar: 172.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2763,7 +2764,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 756466440
+  randomSeed: -1251778794
   InitialModule:
     serializedVersion: 3
     enabled: 1

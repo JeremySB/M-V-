@@ -16,14 +16,14 @@ public class CameraControl : MonoBehaviour
     public float minVertical = -80.0f;
 	public float heightAboveShip = 8f;
 	public float distFromShip = 30f;
-    public Renderer shipRenderer;
-    Transform ship;
-    
+    public Transform ship;
+
+    private Renderer shipRenderer;
+
     // Use this for initialization
     void Start()
     {
-        ship = transform.parent;
-        //transform.localPosition = transform.localPosition + new Vector3(0, offset, 0);
+        shipRenderer = ship.GetComponent<Renderer>();
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -71,7 +71,7 @@ public class CameraControl : MonoBehaviour
         }
 
         transform.position = cameraCenter - (transform.forward * calcDistFromShip);
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+        transform.rotation = Quaternion.LookRotation(transform.forward, ship.up);
     }
 }
 
