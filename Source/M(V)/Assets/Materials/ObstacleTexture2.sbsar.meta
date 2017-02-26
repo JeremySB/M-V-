@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4fcd6f365561fe34ab6a20a7e206c1ff
-timeCreated: 1487443372
+timeCreated: 1488147351
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -9,8 +9,8 @@ SubstanceImporter:
     name: WallTech-01-Room 7
     prototypeName: WallTech-01-Free
     shaderName: 
-    shader: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _EMISSION
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION _NORMALMAP _PARALLAXMAP
     renderQueue: -1
     lightmapFlags: 1
     inputs:
@@ -353,7 +353,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 1, y: 1}
+      scale: {x: 3, y: 1}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -361,12 +361,63 @@ SubstanceImporter:
       serializedVersion: 2
       texEnvs:
       - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 3, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
           name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 3, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
         second:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
+      - first:
+          name: PixelSnap
+        second: 0
       - first:
           name: _BumpScale
         second: 1
@@ -420,6 +471,9 @@ SubstanceImporter:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
       - first:
+          name: _EmisColor
+        second: {r: 0.2, g: 0.2, b: 0.2, a: 0}
+      - first:
           name: _EmissionColor
         second: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
@@ -445,12 +499,30 @@ SubstanceImporter:
       wrapMode: 0
     textureAssignments:
     - shaderProp:
+        name: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 1029526058
+    - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
       baseUID: 1029526036
+    - shaderProp:
+        name: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 1027174972
+    - shaderProp:
+        name: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 1029526056
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 1
+      loadingBehavior: 0
+    - serializedVersion: 2
+      buildTarget: Standalone
       textureWidth: 2048
       textureHeight: 2048
       textureFormat: 1
