@@ -51,16 +51,16 @@ public class CameraControl : MonoBehaviour
         float calcDistFromShip = distFromShip;
 
         // check for objects between ship and camera's center point
-        if (Physics.Raycast(ship.position, ship.up, out hit) && hit.transform.tag != "Player")
+		if (Physics.Raycast(ship.position, ship.up, out hit,heightAboveShip) && hit.transform.tag != "Player")
         {
-			cameraCenter = ship.position + ship.up * Mathf.Min(hit.distance - 2, heightAboveShip);
+			cameraCenter = ship.position + ship.up * (hit.distance - 2);
         }
 
         // check for objects between point camera rotates around and actual camera
 		if (//Physics.Raycast(cameraCenter, -transform.forward, out hit, 400))
-			Physics.SphereCast(cameraCenter, 1.5f, -transform.forward, out hit, 400))
+			Physics.SphereCast(cameraCenter, 1.5f, -transform.forward, out hit, distFromShip))
         {
-            calcDistFromShip = Mathf.Min(hit.distance - 0.1f, distFromShip);
+			calcDistFromShip = hit.distance - 0.3f;//Mathf.Min(hit.distance - 0.1f, distFromShip);
 
             if(calcDistFromShip < 5)
             {
