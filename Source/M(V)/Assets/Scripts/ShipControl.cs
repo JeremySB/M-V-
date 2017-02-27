@@ -17,6 +17,7 @@ public class ShipControl : MonoBehaviour {
     public float thrusterPower = 80000f;
     public float sideThrusterPower = 40000f;
     public float brakeMultiplier = .95f;
+    public float maxSpeed = 100f;
 
     public float turnSpeed = 0.1f;
 
@@ -70,6 +71,7 @@ public class ShipControl : MonoBehaviour {
         if (Input.GetAxis("Brake") != 0)
             rb.velocity *= brakeMultiplier;
 
-        
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        if (rb.velocity.magnitude < 0.1f) rb.velocity = Vector3.zero;
     }
 }
