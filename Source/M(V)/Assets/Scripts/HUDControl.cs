@@ -10,7 +10,7 @@ public class HUDControl : MonoBehaviour {
     public RectTransform dot;
     public RectTransform circle;
     public Text timerText; 
-
+	public Text speedText;
     private float timer = -1;
 
     // Use this for initialization
@@ -41,6 +41,7 @@ public class HUDControl : MonoBehaviour {
             dot.gameObject.SetActive(false);
         }
         
+		speedText.text = ship.velocity.magnitude.ToString() + " Kph";
 	}
 
     private void OnGUI()
