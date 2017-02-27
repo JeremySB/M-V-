@@ -7,12 +7,10 @@ public class AsteroidSpin : MonoBehaviour {
     public Vector3 rotation;
 	// Use this for initialization
 	void Start () {
-        //spd = Random.Range(0.02f, 0.3f);
-        spd = 1 - (transform.localScale.magnitude / 50000f);
+        spd = 0.05f;
+        //spd = 1 - (transform.localScale.magnitude / 50000f);
         rotation = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1));
-        rotation.x *= spd;
-        rotation.y *= spd;
-        rotation.z *= spd;
+        rotation *= spd;
     }
 	
 	// Update is called once per frame
