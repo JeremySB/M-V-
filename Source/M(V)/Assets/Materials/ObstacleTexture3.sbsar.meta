@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 14cad251769b36144bc90ccc44c2835e
-timeCreated: 1488147425
+timeCreated: 1488161503
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -518,6 +518,12 @@ SubstanceImporter:
       textureHeight: 512
       textureFormat: 0
       loadingBehavior: 1
+    - serializedVersion: 2
+      buildTarget: Standalone
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 2
   deletedPrototypes: []
   userData: 
   assetBundleName: 

@@ -515,6 +515,12 @@ SubstanceImporter:
       textureHeight: 512
       textureFormat: 0
       loadingBehavior: 1
+    - serializedVersion: 2
+      buildTarget: Standalone
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
   deletedPrototypes: []
   userData: 
   assetBundleName: 
