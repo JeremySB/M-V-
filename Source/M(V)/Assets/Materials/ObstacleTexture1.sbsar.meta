@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 535f60f6804ede045936e0b4ea0f42ec
-timeCreated: 1488161428
+timeCreated: 1488157915
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -296,7 +296,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Rust_ON_Switch
       value:
-        scalar[0]: 0
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -310,7 +310,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Rust_selection
       value:
-        scalar[0]: 1
+        scalar[0]: 4
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -353,7 +353,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 2, y: 1}
+      scale: {x: 3, y: 1}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -370,7 +370,7 @@ SubstanceImporter:
           name: _DetailAlbedoMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 4, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _DetailMask
@@ -388,13 +388,13 @@ SubstanceImporter:
           name: _EmissionMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 2, y: 1}
+          scale: {x: 3, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _MainTex
         second:
           texture: {instanceID: 0}
-          scale: {x: 2, y: 1}
+          scale: {x: 3, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _MetallicGlossMap

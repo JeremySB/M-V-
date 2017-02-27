@@ -17,6 +17,7 @@ public class CheckpointProgression : MonoBehaviour {
     {
         if (other.CompareTag("Player") && GetComponent<Renderer>().enabled)
         {
+            GetComponent<AudioSource>().Play();
             GetComponent<Renderer>().enabled = false;
             nextCheckpoint.GetComponent<Renderer>().enabled = true;
         }
