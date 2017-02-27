@@ -1,17 +1,19 @@
 fileFormatVersion: 2
 guid: b154e9f0cdd18d248915325c0f80ad73
-timeCreated: 1447388467
-licenseType: Store
+timeCreated: 1488159130
+licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 16
     name: WallTech-01-Floor 1
     prototypeName: WallTech-01-Free
+    shaderName: 
     shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _NORMALMAP _PARALLAXMAP
+    shaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _NORMALMAP _PARALLAXMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+      _SPECULARHIGHLIGHTS_OFF
     renderQueue: -1
-    lightmapFlags: 5
+    lightmapFlags: 1
     inputs:
     - name: $outputsize
       value:
@@ -29,16 +31,16 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: $randomseed
       value:
-        scalar[0]: 0
+        scalar[0]: 3564
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Output_Color
       value:
-        scalar[0]: .290196091
-        scalar[1]: .313725501
-        scalar[2]: .298039228
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
         scalar[3]: 1
         texture: {instanceID: 0}
     - name: Blend_Mode
@@ -64,10 +66,10 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Background_Output_Color
       value:
-        scalar[0]: .168627456
-        scalar[1]: .164705887
-        scalar[2]: .164705887
-        scalar[3]: .156862751
+        scalar[0]: 0.16862746
+        scalar[1]: 0.16470589
+        scalar[2]: 0.16470589
+        scalar[3]: 0.15686275
         texture: {instanceID: 0}
     - name: Background_Number_X
       value:
@@ -169,7 +171,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Midle_matrix
       value:
-        scalar[0]: 1.10000002
+        scalar[0]: 1.1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 2.25
@@ -177,7 +179,7 @@ SubstanceImporter:
     - name: Midle_Offset
       value:
         scalar[0]: 0
-        scalar[1]: .170000002
+        scalar[1]: 0.17
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
@@ -225,15 +227,15 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Trim_Top_matrix
       value:
-        scalar[0]: -.998349011
+        scalar[0]: -0.998349
         scalar[1]: 0
         scalar[2]: 0
-        scalar[3]: -6.57366991
+        scalar[3]: -6.57367
         texture: {instanceID: 0}
     - name: Trim_Top_offset
       value:
-        scalar[0]: -3.68439009e-06
-        scalar[1]: -2.62599993
+        scalar[0]: -0.00000368439
+        scalar[1]: -2.626
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
@@ -274,10 +276,10 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Trim_Bottom_matrix
       value:
-        scalar[0]: -.999684989
+        scalar[0]: -0.999685
         scalar[1]: 0
         scalar[2]: 0
-        scalar[3]: -3.6177299
+        scalar[3]: -3.61773
         texture: {instanceID: 0}
     - name: Trim_Bottom_offset
       value:
@@ -302,7 +304,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Rust_Balance
       value:
-        scalar[0]: .800000012
+        scalar[0]: 0.8
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -316,7 +318,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Rust_Offset
       value:
-        scalar[0]: .270000011
+        scalar[0]: 0.27
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -352,138 +354,126 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 5, y: 5}
+      scale: {x: 1, y: 1}
       generateMipmaps: 1
-      generateAllOutputs: 0
+      generateAllOutputs: 1
       animationUpdateRate: 42
     materialProperties:
       serializedVersion: 2
       texEnvs:
-        data:
-          first:
-            name: _MainTex
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _BumpMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _DetailNormalMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _ParallaxMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _OcclusionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _EmissionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _DetailMask
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _DetailAlbedoMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _SpecGlossMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _SpecGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
       floats:
-        data:
-          first:
-            name: _SrcBlend
-          second: 1
-        data:
-          first:
-            name: _DstBlend
-          second: 0
-        data:
-          first:
-            name: _Cutoff
-          second: .5
-        data:
-          first:
-            name: _Parallax
-          second: .0199999996
-        data:
-          first:
-            name: _ZWrite
-          second: 1
-        data:
-          first:
-            name: _Glossiness
-          second: .518999994
-        data:
-          first:
-            name: _BumpScale
-          second: 1
-        data:
-          first:
-            name: _OcclusionStrength
-          second: 1
-        data:
-          first:
-            name: _DetailNormalMapScale
-          second: 1
-        data:
-          first:
-            name: _UVSec
-          second: 0
-        data:
-          first:
-            name: _Mode
-          second: 0
-        data:
-          first:
-            name: _Metallic
-          second: 0
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 1
+      - first:
+          name: _GlossyReflections
+        second: 0
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.08
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 1
+      - first:
+          name: _SpecularHighlights
+        second: 0
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
       colors:
-        data:
-          first:
-            name: _EmissionColor
-          second: {r: 0, g: 0, b: 0, a: 1}
-        data:
-          first:
-            name: _Color
-          second: {r: 1, g: 1, b: 1, a: 1}
-        data:
-          first:
-            name: _SpecColor
-          second: {r: .183823526, g: .183823526, b: .183823526, a: 1}
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0.014705896, g: 0.011461949, b: 0.011461949, a: 1}
+      - first:
+          name: _SpecColor
+        second: {r: 0.21323532, g: 0.2085316, b: 0.2085316, a: 1}
     textureParameters:
     - name: WallTech-01-Floor 1_height
       alphaSource: 0
@@ -507,21 +497,21 @@ SubstanceImporter:
       wrapMode: 0
     textureAssignments:
     - shaderProp:
-        name: _MainTex
-      material: {instanceID: 0}
-      baseUID: 1029526036
-    - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
       baseUID: 1029526058
     - shaderProp:
-        name: _ParallaxMap
+        name: _MainTex
       material: {instanceID: 0}
-      baseUID: 1029526056
+      baseUID: 1029526036
     - shaderProp:
         name: _OcclusionMap
       material: {instanceID: 0}
       baseUID: 1027174972
+    - shaderProp:
+        name: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 1029526056
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
