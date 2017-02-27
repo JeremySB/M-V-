@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 535f60f6804ede045936e0b4ea0f42ec
-timeCreated: 1488147373
+timeCreated: 1488161428
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -364,7 +364,7 @@ SubstanceImporter:
           name: _BumpMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 2, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _DetailAlbedoMap
@@ -406,13 +406,13 @@ SubstanceImporter:
           name: _OcclusionMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 2, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _ParallaxMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 2, y: 1}
           offset: {x: 0, y: 0}
       floats:
       - first:
@@ -470,6 +470,9 @@ SubstanceImporter:
       - first:
           name: _EmissionColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      - first:
+          name: _SpecColor
+        second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     textureParameters:
     - name: WallTech-01-Room 2_height
       alphaSource: 0
@@ -515,6 +518,12 @@ SubstanceImporter:
       textureHeight: 2048
       textureFormat: 1
       loadingBehavior: 0
+    - serializedVersion: 2
+      buildTarget: Standalone
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 1
+      loadingBehavior: 2
   deletedPrototypes: []
   userData: 
   assetBundleName: 

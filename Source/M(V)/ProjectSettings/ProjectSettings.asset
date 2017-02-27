@@ -120,7 +120,8 @@ PlayerSettings:
     Others: 1
   bundleIdentifier: com.Company.ProductName
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 102900000, guid: 5886cd5e92e336c4fb920708e495773f, type: 3}
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
@@ -138,7 +139,7 @@ PlayerSettings:
   ForceSDCardPermission: 0
   CreateWallpaper: 0
   APKExpansionFiles: 0
-  preloadShaders: 0
+  preloadShaders: 1
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask:
     serializedVersion: 2
