@@ -1262,7 +1262,7 @@ SphereCollider:
   m_GameObject: {fileID: 1250830973326164}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1274,7 +1274,7 @@ SphereCollider:
   m_GameObject: {fileID: 1529470762651600}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1286,7 +1286,7 @@ SphereCollider:
   m_GameObject: {fileID: 1974437884518948}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1298,7 +1298,7 @@ SphereCollider:
   m_GameObject: {fileID: 1264103386756782}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1310,7 +1310,7 @@ SphereCollider:
   m_GameObject: {fileID: 1175772894873598}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1322,7 +1322,7 @@ SphereCollider:
   m_GameObject: {fileID: 1232103033956486}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1334,7 +1334,7 @@ SphereCollider:
   m_GameObject: {fileID: 1512848526495600}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1346,7 +1346,7 @@ SphereCollider:
   m_GameObject: {fileID: 1710134964374598}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 16
   m_Center: {x: 0, y: 0, z: 16}
@@ -1405,7 +1405,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 133068050
+  randomSeed: -2044210942
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -16903,7 +16903,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -96656041
+  randomSeed: 174700097
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -35014,7 +35014,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 854293632
+  randomSeed: -378164869
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -40204,7 +40204,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1225726226
+  randomSeed: -746782298
   InitialModule:
     serializedVersion: 3
     enabled: 1
