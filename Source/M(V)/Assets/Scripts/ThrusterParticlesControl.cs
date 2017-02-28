@@ -16,11 +16,11 @@ public class ThrusterParticlesControl : MonoBehaviour {
 	void Update () {
         if (Input.GetAxis(PosAxis1) > 0.01f || Input.GetAxis(PosAxis2) > 0.01f)
         {
-            particles.Play();
+            if(!particles.isPlaying) particles.Play();
         }
         else if (Input.GetAxis(NegAxis1) < -0.01f || Input.GetAxis(NegAxis2) < -0.01f)
         {
-            particles.Play();
+            if (!particles.isPlaying) particles.Play();
         }
         else
         {
