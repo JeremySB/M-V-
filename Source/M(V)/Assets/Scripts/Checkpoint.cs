@@ -14,7 +14,7 @@ public class Checkpoint : MonoBehaviour {
         if (other.CompareTag("Player") && GetComponent<Renderer>().enabled)
         {
             GetComponent<AudioSource>().Play();
-			parent.next ();
+			parent.Next();
         }
     }
     // Update is called once per frame

@@ -40,9 +40,10 @@ public class HUDControl : MonoBehaviour {
         {
             dot.gameObject.SetActive(false);
         }
-        
-		speedText.text = ship.velocity.magnitude.ToString() + " Kph";
-	}
+
+        //speedText.text = ship.velocity.magnitude.ToString() + " Kph";
+        speedText.text = "";
+    }
 
     private void OnGUI()
     {
