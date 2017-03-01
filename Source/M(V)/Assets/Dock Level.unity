@@ -12052,7 +12052,7 @@ GameObject:
   - component: {fileID: 1185763378}
   m_Layer: 2
   m_Name: Checkpoint
-  m_TagString: Start
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20459,6 +20459,10 @@ Prefab:
       propertyPath: checkpoints
       value: 
       objectReference: {fileID: 288720838}
+    - target: {fileID: 1141208808532554, guid: 2329903e569c6be41bdb52662ebfa387, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2329903e569c6be41bdb52662ebfa387, type: 2}
   m_IsPrefabParent: 0

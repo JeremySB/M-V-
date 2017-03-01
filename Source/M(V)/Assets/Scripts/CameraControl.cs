@@ -19,11 +19,13 @@ public class CameraControl : MonoBehaviour
     public Transform ship;
 
     private Renderer shipRenderer;
+    private MenuManager menu;
 
     // Use this for initialization
     void Start()
     {
         shipRenderer = ship.GetComponent<Renderer>();
+        menu = FindObjectOfType<MenuManager>();
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -32,7 +34,16 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(menu.IsMenuShown)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     void LateUpdate()
