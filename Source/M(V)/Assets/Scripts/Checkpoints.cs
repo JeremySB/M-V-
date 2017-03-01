@@ -25,7 +25,7 @@ public class Checkpoints : MonoBehaviour {
 
 	public void Next(){
         currentCheckpoint.fading = true;
-        if (currentCheckpointIndex >= 1)
+        if (currentCheckpointIndex >= checkpoints.Length - 1)
         {
             // round over
             currentCheckpointIndex = 0;
