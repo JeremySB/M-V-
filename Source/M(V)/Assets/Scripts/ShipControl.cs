@@ -24,20 +24,25 @@ public class ShipControl : MonoBehaviour {
     Rigidbody rb;
 
     public Transform mainCamera;
+
+    private MenuManager menu;
     
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
+        menu = FindObjectOfType<MenuManager>();
 	}
 
     // Update is called once per frame
     void Update() {
 
+        if (menu.IsMenuShown) return;
+
         /*
         * Rotations
         */
-        
+
 
         // move towards camera view
         Quaternion target = Quaternion.Slerp(transform.rotation, mainCamera.rotation, turnSpeed);
@@ -49,23 +54,31 @@ public class ShipControl : MonoBehaviour {
     }
 
     // FixedUpdate is better for forces/RB stuff
-    void FixedUpdate() { 
+    void FixedUpdate() {
+
+        if (menu.IsMenuShown)
+        {
+            return;
+        }
 
         /*
          * Thrust/forces
          */
 
         float forwardThrust = Input.GetAxis("Thrust") * thrusterPower;
-        rb.AddForce(forwardThrust * transform.forward);
-
+        
         float sideThrust = Input.GetAxis("Side Thrust") * sideThrusterPower;
-        rb.AddForce(sideThrust * transform.right);
-
+        
         float vertThrust = Input.GetAxis("Vertical Thrust") * sideThrusterPower;
-        rb.AddForce(vertThrust * transform.up);
-
+        
         // roll
         float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
+
+        
+
+        rb.AddForce(forwardThrust * transform.forward);
+        rb.AddForce(sideThrust * transform.right);
+        rb.AddForce(vertThrust * transform.up);
         rb.AddTorque(transform.forward * deltaZ * sideThrusterPower);
 
         if (Input.GetAxis("Brake") != 0)

@@ -1264,7 +1264,6 @@ MonoBehaviour:
   arrow: {fileID: 224041262056375646}
   timerText: {fileID: 114944625330160234}
   speedText: {fileID: 114771887535195908}
-  timer: -1
 --- !u!114 &114767073517071296
 MonoBehaviour:
   m_ObjectHideFlags: 1
