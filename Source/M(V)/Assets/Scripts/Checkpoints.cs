@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour {
 	public Checkpoint[] checkpoints;
-	private Checkpoint currentCheckpoint;
+	public Checkpoint currentCheckpoint;
     public Transform ship;
     public Transform spawnPoint;
     public Transform cam;
