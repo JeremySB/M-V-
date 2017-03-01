@@ -31,11 +31,10 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(menu.IsMenuShown);
         if(menu.IsMenuShown)
         {
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {

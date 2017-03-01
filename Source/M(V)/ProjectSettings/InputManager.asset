@@ -57,9 +57,9 @@ InputManager:
     m_Name: Vertical Thrust
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left ctrl
+    negativeButton: left shift
     positiveButton: space
-    altNegativeButton: left shift
+    altNegativeButton: 
     altPositiveButton: 
     gravity: 3
     dead: 0.001
@@ -363,6 +363,22 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Pause
+    descriptiveName: Opens pause menu
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: escape
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
