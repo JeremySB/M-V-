@@ -19,25 +19,34 @@ public class CameraControl : MonoBehaviour
     public Transform ship;
 
     private Renderer shipRenderer;
+    private MenuManager menu;
 
     // Use this for initialization
     void Start()
     {
         shipRenderer = ship.GetComponent<Renderer>();
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        menu = FindObjectOfType<MenuManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(menu.IsMenuShown);
+        if(menu.IsMenuShown)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     void LateUpdate()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (menu.IsMenuShown) return;
 
         float deltaX = Input.GetAxis("Pitch") * sensitivityCamera;
         float deltaY = Input.GetAxis("Yaw") * sensitivityCamera;
