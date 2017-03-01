@@ -6,13 +6,9 @@ public class MenuManager : MonoBehaviour {
 
     public GameObject StartPanel;
 
-    private bool menuShown;
-
-    public bool IsMenuShown
-    {
-        get { return menuShown; }
-    }
-
+    private bool menuShown = true;
+    private GameObject hud;
+    
     void Awake()
     {
         menuShown = true;
@@ -20,7 +16,9 @@ public class MenuManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        Time.timeScale = 0.0f;
+        hud = FindObjectOfType<HUDControl>().gameObject;
+        hud.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -28,14 +26,26 @@ public class MenuManager : MonoBehaviour {
 		
 	}
 
+    private void HideMenu()
+    {
+        menuShown = false;
+        hud.SetActive(true);
+        Time.timeScale = 1.0f;
+    }
+
     public void StartGame()
     {
         StartPanel.SetActive(false);
-        menuShown = false;
+        HideMenu();
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public bool IsMenuShown
+    {
+        get { return menuShown; }
     }
 }

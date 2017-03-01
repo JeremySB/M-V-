@@ -26,18 +26,16 @@ public class CameraControl : MonoBehaviour
     {
         shipRenderer = ship.GetComponent<Renderer>();
         menu = FindObjectOfType<MenuManager>();
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(menu.IsMenuShown);
         if(menu.IsMenuShown)
         {
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
         }
         else
         {
@@ -48,7 +46,7 @@ public class CameraControl : MonoBehaviour
 
     void LateUpdate()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (menu.IsMenuShown) return;
 
         float deltaX = Input.GetAxis("Pitch") * sensitivityCamera;
         float deltaY = Input.GetAxis("Yaw") * sensitivityCamera;

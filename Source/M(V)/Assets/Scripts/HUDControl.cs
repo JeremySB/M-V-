@@ -13,12 +13,10 @@ public class HUDControl : MonoBehaviour {
     public RectTransform arrow;
     public Text timerText; 
 	public Text speedText;
-
     public float timer = -1;
 
     // Use this for initialization
     void Start () {
-		
 	}
 	
 	// Update is called once per frame
