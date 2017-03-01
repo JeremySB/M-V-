@@ -1381,6 +1381,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 128476753}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &131483378 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4525535063291282, guid: 2329903e569c6be41bdb52662ebfa387,
+    type: 2}
+  m_PrefabInternal: {fileID: 2025452207}
 --- !u!1001 &139456109
 Prefab:
   m_ObjectHideFlags: 0
@@ -3026,7 +3031,9 @@ MonoBehaviour:
   - {fileID: 724260271}
   - {fileID: 1822902877}
   - {fileID: 119522367}
-  currentCheckpoint: {fileID: 0}
+  ship: {fileID: 131483378}
+  spawnPoint: {fileID: 2007535974}
+  cam: {fileID: 520396165}
 --- !u!4 &288720839
 Transform:
   m_ObjectHideFlags: 0
@@ -4997,6 +5004,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &520396165 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4032340603011002, guid: 2329903e569c6be41bdb52662ebfa387,
+    type: 2}
+  m_PrefabInternal: {fileID: 2025452207}
 --- !u!1 &521919054
 GameObject:
   m_ObjectHideFlags: 0
