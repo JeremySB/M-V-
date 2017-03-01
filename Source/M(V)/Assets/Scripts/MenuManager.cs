@@ -5,6 +5,7 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour {
 
     public GameObject StartPanel;
+    public GameObject PausePanel;
 
     private bool menuShown = true;
     private GameObject hud;
@@ -23,7 +24,13 @@ public class MenuManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(!menuShown)
+        {
+            if(Input.GetButtonDown("esc"))
+            {
+
+            }
+        }
 	}
 
     private void HideMenu()
@@ -36,6 +43,12 @@ public class MenuManager : MonoBehaviour {
     public void StartGame()
     {
         StartPanel.SetActive(false);
+        HideMenu();
+    }
+
+    public void ResumeGame()
+    {
+        PausePanel.SetActive(false);
         HideMenu();
     }
 

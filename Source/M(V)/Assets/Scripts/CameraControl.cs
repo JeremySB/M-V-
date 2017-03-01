@@ -35,7 +35,7 @@ public class CameraControl : MonoBehaviour
         if(menu.IsMenuShown)
         {
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
