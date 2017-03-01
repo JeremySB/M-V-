@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour {
 	public Checkpoint[] checkpoints;
-	public Checkpoint currentCheckpoint;
+	private Checkpoint currentCheckpoint;
+    public Transform ship;
+    public Transform spawnPoint;
+    public Transform cam;
 	private int currentCheckpointIndex = 0;
 	// Use this for initialization
 	void Start () {
@@ -26,5 +29,22 @@ public class Checkpoints : MonoBehaviour {
 			currentCheckpoint = checkpoints [++currentCheckpointIndex];
 			currentCheckpoint.GetComponent<Renderer> ().enabled = true;
 		}
+        else if(currentCheckpointIndex == checkpoints.Length - 1)
+        {
+            currentCheckpointIndex = 0;
+            currentCheckpoint = checkpoints[++currentCheckpointIndex];
+            currentCheckpoint.GetComponent<Renderer>().enabled = true;
+            ResetShip();
+        }
 	}
+
+    // reset ship to spawnpoint
+    private void ResetShip()
+    {
+        ship.position = spawnPoint.position;
+        ship.rotation = spawnPoint.rotation;
+        cam.rotation = spawnPoint.rotation;
+        ship.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        FindObjectOfType<HUDControl>().timer = -1;
+    }
 }

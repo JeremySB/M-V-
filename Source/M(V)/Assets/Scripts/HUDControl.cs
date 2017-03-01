@@ -11,7 +11,7 @@ public class HUDControl : MonoBehaviour {
     public RectTransform circle;
     public Text timerText; 
 	public Text speedText;
-    private float timer = -1;
+    public float timer = -1;
 
     // Use this for initialization
     void Start () {
