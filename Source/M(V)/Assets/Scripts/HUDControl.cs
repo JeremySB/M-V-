@@ -7,10 +7,13 @@ public class HUDControl : MonoBehaviour {
 
     public Rigidbody ship;
     public Camera cam;
+    public Checkpoints checkpoints;
     public RectTransform dot;
     public RectTransform circle;
+    public RectTransform arrow;
     public Text timerText; 
 	public Text speedText;
+
     private float timer = -1;
 
     // Use this for initialization
@@ -20,7 +23,48 @@ public class HUDControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(timer >= 0)
+        //checkpoint indicator
+        Vector3 screenpos = cam.WorldToScreenPoint(checkpoints.currentCheckpoint.transform.position);
+        if (screenpos.z > 0 && screenpos.x > 0 && screenpos.x < Screen.width &&
+            screenpos.y > 0 && screenpos.y < Screen.height)
+        {
+            arrow.gameObject.SetActive(false);
+        }
+        else {
+            arrow.gameObject.SetActive(true);
+            float x = screenpos.x;
+            float y = screenpos.y;
+            float offset = 40;
+
+            if (screenpos.z < 0)
+            {
+                screenpos = -screenpos;
+            }
+
+            if (screenpos.x > Screen.width)
+            {
+                x = Screen.width - offset;
+            }
+            if (screenpos.x < 0)
+            {
+                x = offset;
+            }
+
+            if (screenpos.y > Screen.height)
+            {
+                y = Screen.height - offset;
+            }
+            if (screenpos.y < 0)
+            {
+                y = offset;
+            }
+            arrow.transform.position = new Vector3(x, y, 0);
+            float angle = Mathf.Atan2(screenpos.y, screenpos.x);
+            angle -= 90 * Mathf.Deg2Rad;
+            arrow.transform.localRotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
+        }
+        //end offscreen indicator
+        if (timer >= 0)
         {
             timer += Time.deltaTime;
         }

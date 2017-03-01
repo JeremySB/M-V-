@@ -21,7 +21,8 @@ public class Checkpoints : MonoBehaviour {
 	}
 
 	public void Next(){
-		currentCheckpoint.GetComponent<Renderer> ().enabled = false;
+        currentCheckpoint.fading = true;
+		//currentCheckpoint.GetComponent<Renderer> ().enabled = false;
 		if(currentCheckpointIndex < checkpoints.Length - 1){
 			currentCheckpoint = checkpoints [++currentCheckpointIndex];
 			currentCheckpoint.GetComponent<Renderer> ().enabled = true;
