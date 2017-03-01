@@ -431,6 +431,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1877954018932028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224041262056375646}
+  - component: {fileID: 222510527684992074}
+  - component: {fileID: 114045588035451884}
+  m_Layer: 5
+  m_Name: CheckpointIndicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1974437884518948
 GameObject:
   m_ObjectHideFlags: 1
@@ -974,6 +991,33 @@ MonoBehaviour:
   PosAxis2: None
   NegAxis1: Roll
   NegAxis2: None
+--- !u!114 &114045588035451884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877954018932028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.17241383, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: a479f7146a167964890bbe1f0f008093, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114119038372772156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1214,8 +1258,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 54455562792738068}
   cam: {fileID: 20525433119699344}
+  checkpoints: {fileID: 0}
   dot: {fileID: 224404274113235662}
   circle: {fileID: 224438068277624168}
+  arrow: {fileID: 224041262056375646}
   timerText: {fileID: 114944625330160234}
   speedText: {fileID: 114771887535195908}
   timer: -1
@@ -43668,6 +43714,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1837309119027754}
+--- !u!222 &222510527684992074
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877954018932028}
 --- !u!222 &222607806965404572
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -43703,8 +43755,26 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!224 &224041262056375646
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877954018932028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224346212538495204}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -50, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 0}
 --- !u!224 &224114023251266850
 RectTransform:
   m_ObjectHideFlags: 1
@@ -43737,6 +43807,7 @@ RectTransform:
   - {fileID: 224438068277624168}
   - {fileID: 224491922908369794}
   - {fileID: 224114023251266850}
+  - {fileID: 224041262056375646}
   m_Father: {fileID: 4644629123260830}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
