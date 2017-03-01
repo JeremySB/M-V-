@@ -25,18 +25,17 @@ public class Checkpoints : MonoBehaviour {
 
 	public void Next(){
         currentCheckpoint.fading = true;
-		//currentCheckpoint.GetComponent<Renderer> ().enabled = false;
-		if(currentCheckpointIndex < checkpoints.Length - 1){
-			currentCheckpoint = checkpoints [++currentCheckpointIndex];
-			currentCheckpoint.GetComponent<Renderer> ().enabled = true;
-		}
-        else if(currentCheckpointIndex == checkpoints.Length - 1)
+        if (currentCheckpointIndex >= checkpoints.Length - 1)
         {
             currentCheckpointIndex = 0;
-            currentCheckpoint = checkpoints[++currentCheckpointIndex];
+            currentCheckpoint = checkpoints[currentCheckpointIndex];
             currentCheckpoint.GetComponent<Renderer>().enabled = true;
             ResetShip();
         }
+        else if (currentCheckpointIndex < checkpoints.Length - 1){
+			currentCheckpoint = checkpoints [++currentCheckpointIndex];
+			currentCheckpoint.GetComponent<Renderer>().enabled = true;
+		}
 	}
 
     // reset ship to spawnpoint
