@@ -57,20 +57,21 @@ public class CameraControl : MonoBehaviour
         }
 
         // check for objects between point camera rotates around and actual camera
-		if (//Physics.Raycast(cameraCenter, -transform.forward, out hit, 400))
-			Physics.SphereCast(cameraCenter, 1.5f, -transform.forward, out hit, distFromShip))
+		if (Physics.SphereCast(cameraCenter, 1.5f, -transform.forward, out hit, distFromShip))
         {
 			calcDistFromShip = hit.distance - 0.3f;//Mathf.Min(hit.distance - 0.1f, distFromShip);
-
-            if(calcDistFromShip < 3)
-            {
-                shipRenderer.enabled = false;
-            } else
-            {
-                shipRenderer.enabled = true;
-            }
         }
-		Debug.DrawLine (ship.position, cameraCenter,Color.red);
+
+        if (calcDistFromShip < 3)
+        {
+            shipRenderer.enabled = false;
+        }
+        else
+        {
+            shipRenderer.enabled = true;
+        }
+
+        Debug.DrawLine (ship.position, cameraCenter,Color.red);
 		Debug.DrawLine (cameraCenter, cameraCenter - (transform.forward * calcDistFromShip), Color.cyan);
         transform.position = cameraCenter - (transform.forward * calcDistFromShip);
         transform.rotation = Quaternion.LookRotation(transform.forward, ship.up);
