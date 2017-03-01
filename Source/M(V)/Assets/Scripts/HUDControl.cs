@@ -13,10 +13,12 @@ public class HUDControl : MonoBehaviour {
     public RectTransform arrow;
     public Text timerText; 
 	public Text speedText;
-    public float timer = -1;
+
+    public float timer { get; set; }
 
     // Use this for initialization
     void Start () {
+        timer = -1;
 	}
 	
 	// Update is called once per frame
@@ -83,7 +85,6 @@ public class HUDControl : MonoBehaviour {
             dot.gameObject.SetActive(false);
         }
 
-        //speedText.text = ship.velocity.magnitude.ToString() + " Kph";
         speedText.text = "";
     }
 

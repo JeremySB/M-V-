@@ -25,11 +25,13 @@ public class Checkpoints : MonoBehaviour {
 
 	public void Next(){
         currentCheckpoint.fading = true;
-        if (currentCheckpointIndex >= checkpoints.Length - 1)
+        if (currentCheckpointIndex >= 1)
         {
+            // round over
             currentCheckpointIndex = 0;
             currentCheckpoint = checkpoints[currentCheckpointIndex];
             currentCheckpoint.GetComponent<Renderer>().enabled = true;
+            FindObjectOfType<MenuManager>().GameOver();
             ResetShip();
         }
         else if (currentCheckpointIndex < checkpoints.Length - 1){
@@ -45,6 +47,5 @@ public class Checkpoints : MonoBehaviour {
         ship.rotation = spawnPoint.rotation;
         cam.rotation = spawnPoint.rotation;
         ship.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        FindObjectOfType<HUDControl>().timer = -1;
     }
 }
