@@ -17,18 +17,26 @@ public class MenuManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Time.timeScale = 0.0f;
         hud = FindObjectOfType<HUDControl>().gameObject;
-        hud.SetActive(false);
+        ShowMenu();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(!menuShown)
         {
-            if(Input.GetButtonDown("esc"))
+            if(Input.GetButtonDown("Pause"))
             {
-
+                PausePanel.SetActive(true);
+                ShowMenu();
+            }
+        }
+        else if(PausePanel.activeInHierarchy)
+        {
+            if (Input.GetButtonDown("Pause"))
+            {
+                PausePanel.SetActive(false);
+                HideMenu();
             }
         }
 	}
@@ -38,6 +46,13 @@ public class MenuManager : MonoBehaviour {
         menuShown = false;
         hud.SetActive(true);
         Time.timeScale = 1.0f;
+    }
+
+    private void ShowMenu()
+    {
+        menuShown = true;
+        hud.SetActive(false);
+        Time.timeScale = 0.0f;
     }
 
     public void StartGame()
@@ -55,6 +70,7 @@ public class MenuManager : MonoBehaviour {
     public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Quitting not supported in editor");
     }
 
     public bool IsMenuShown
