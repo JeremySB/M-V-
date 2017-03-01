@@ -1141,7 +1141,7 @@ MonoBehaviour:
   sideThrusterPower: 40000
   brakeMultiplier: 0.95
   maxSpeed: 200
-  turnSpeed: 0.05
+  turnSpeed: 0.1
   mainCamera: {fileID: 4032340603011002}
 --- !u!114 &114545534425819706
 MonoBehaviour:
