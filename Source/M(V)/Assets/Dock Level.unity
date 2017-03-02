@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16488901, g: 0.10867707, b: 0.22397444, a: 1}
+  m_IndirectSpecularColor: {r: 0.16487247, g: 0.10864631, b: 0.22399879, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -367,6 +367,11 @@ Prefab:
         type: 2}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64883121678640454, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
@@ -3731,6 +3736,11 @@ Prefab:
         type: 2}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64883121678640454, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
@@ -8206,6 +8216,11 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
   m_IsPrefabParent: 0
@@ -8395,6 +8410,11 @@ Prefab:
         type: 2}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64883121678640454, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
@@ -10065,6 +10085,11 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64883121678640454, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
   m_IsPrefabParent: 0
@@ -10941,7 +10966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4176e35cfffc0b4ea8bb9a7e8a8eba6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 62453.844
+      value: 63370.11
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: d4176e35cfffc0b4ea8bb9a7e8a8eba6, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12267,7 +12292,7 @@ Prefab:
     - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
         type: 2}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
         type: 2}
@@ -17408,6 +17433,11 @@ Prefab:
         type: 2}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
@@ -22613,21 +22643,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 82868865630792398, guid: 2329903e569c6be41bdb52662ebfa387,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ab7509cf956f8114e8d6944e7342530e, type: 3}
-    - target: {fileID: 82332615557157348, guid: 2329903e569c6be41bdb52662ebfa387,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82332615557157348, guid: 2329903e569c6be41bdb52662ebfa387,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: dfc747f512dfb8c4f9621af731bc4acd, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2329903e569c6be41bdb52662ebfa387, type: 2}
   m_IsPrefabParent: 0
@@ -22690,6 +22705,11 @@ Prefab:
         type: 2}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
