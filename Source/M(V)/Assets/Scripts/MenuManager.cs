@@ -113,6 +113,14 @@ public class MenuManager : MonoBehaviour {
         hud.GetComponent<HUDControl>().timer = -1;
     }
 
+    public void RestartGame()
+    {
+        hud.GetComponent<HUDControl>().timer = -1;
+        FindObjectOfType<Checkpoints>().ResetShip();
+        PausePanel.SetActive(false);
+        HideMenu();
+    }
+
     public void StartGame()
     {
         StartPanel.SetActive(false);

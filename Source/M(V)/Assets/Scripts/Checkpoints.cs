@@ -28,9 +28,6 @@ public class Checkpoints : MonoBehaviour {
         if (currentCheckpointIndex >= checkpoints.Length - 1)
         {
             // round over
-            currentCheckpointIndex = 0;
-            currentCheckpoint = checkpoints[currentCheckpointIndex];
-            currentCheckpoint.GetComponent<Renderer>().enabled = true;
             FindObjectOfType<MenuManager>().GameOver();
             ResetShip();
         }
@@ -41,8 +38,12 @@ public class Checkpoints : MonoBehaviour {
 	}
 
     // reset ship to spawnpoint
-    private void ResetShip()
+    public void ResetShip()
     {
+        currentCheckpoint.GetComponent<Renderer>().enabled = false;
+        currentCheckpointIndex = 0;
+        currentCheckpoint = checkpoints[currentCheckpointIndex];
+        currentCheckpoint.GetComponent<Renderer>().enabled = true;
         ship.position = spawnPoint.position;
         ship.rotation = spawnPoint.rotation;
         cam.rotation = spawnPoint.rotation;
