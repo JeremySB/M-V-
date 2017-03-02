@@ -26,12 +26,13 @@ public class ShipControl : MonoBehaviour {
     public Transform mainCamera;
 
     private MenuManager menu;
-    
+	private AudioSource[] sources;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
         menu = FindObjectOfType<MenuManager>();
+		sources = GetComponents<AudioSource> ();
 	}
 
     // Update is called once per frame
@@ -70,11 +71,16 @@ public class ShipControl : MonoBehaviour {
         float sideThrust = Input.GetAxis("Side Thrust") * sideThrusterPower;
         
         float vertThrust = Input.GetAxis("Vertical Thrust") * sideThrusterPower;
-        
+
         // roll
         float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
 
-        
+		if ((forwardThrust > 0 || sideThrust != 0 || vertThrust != 0 || deltaZ != 0)) {
+			if(!sources[1].isPlaying)
+			sources [1].Play ();
+		}
+		else if (sources [1].isPlaying)
+			sources [1].Pause ();
 
         rb.AddForce(forwardThrust * transform.forward);
         rb.AddForce(sideThrust * transform.right);
@@ -87,4 +93,8 @@ public class ShipControl : MonoBehaviour {
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         if (rb.velocity.magnitude < 0.1f) rb.velocity = Vector3.zero;
     }
+	void OnCollisionEnter(Collision col){
+		if(!sources[0].isPlaying)
+			sources [0].Play ();
+	}
 }
