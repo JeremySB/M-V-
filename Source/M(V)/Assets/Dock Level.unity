@@ -434,6 +434,11 @@ Prefab:
       propertyPath: m_Name
       value: Asteroid_D (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 54361686586643180, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
   m_IsPrefabParent: 0
@@ -3962,6 +3967,11 @@ Prefab:
     - target: {fileID: 103884, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
       propertyPath: m_Name
       value: Asteroid_D (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 54361686586643180, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
@@ -8362,6 +8372,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 14084.809
       objectReference: {fileID: 0}
+    - target: {fileID: 54600089431619202, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
   m_IsPrefabParent: 0
@@ -8511,6 +8526,11 @@ Prefab:
     - target: {fileID: 444136, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 54361686586643180, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
@@ -10224,6 +10244,11 @@ Prefab:
     - target: {fileID: 103884, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
       propertyPath: m_Name
       value: Asteroid_D (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 54361686586643180, guid: 7f7566e20b9ffe54798c1bf42201e1a9,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 2}
@@ -12414,6 +12439,26 @@ Prefab:
     - target: {fileID: 4023975988877224, guid: 49e59941b4986b549b376495e2685776, type: 2}
       propertyPath: m_LocalScale.z
       value: 14084.809
+      objectReference: {fileID: 0}
+    - target: {fileID: 54600089431619202, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64714310783489732, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_InflateMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54600089431619202, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
@@ -17359,6 +17404,11 @@ Prefab:
     - target: {fileID: 1340649422869174, guid: 49e59941b4986b549b376495e2685776, type: 2}
       propertyPath: m_Name
       value: Asteroid 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54600089431619202, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
@@ -22694,6 +22744,11 @@ Prefab:
     - target: {fileID: 4023975988877224, guid: 49e59941b4986b549b376495e2685776, type: 2}
       propertyPath: m_LocalScale.z
       value: 14084.809
+      objectReference: {fileID: 0}
+    - target: {fileID: 54600089431619202, guid: 49e59941b4986b549b376495e2685776,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e59941b4986b549b376495e2685776, type: 2}
