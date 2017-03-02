@@ -1258,7 +1258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 54455562792738068}
   cam: {fileID: 20525433119699344}
-  checkpoints: {fileID: 0}
   dot: {fileID: 224404274113235662}
   circle: {fileID: 224438068277624168}
   arrow: {fileID: 224041262056375646}

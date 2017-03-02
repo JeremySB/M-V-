@@ -7,7 +7,7 @@ public class HUDControl : MonoBehaviour {
 
     public Rigidbody ship;
     public Camera cam;
-    public Checkpoints checkpoints;
+    private Checkpoints checkpoints;
     public RectTransform dot;
     public RectTransform circle;
     public RectTransform arrow;
@@ -19,6 +19,7 @@ public class HUDControl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         timer = -1;
+        checkpoints = FindObjectOfType<Checkpoints>();
 	}
 	
 	// Update is called once per frame
