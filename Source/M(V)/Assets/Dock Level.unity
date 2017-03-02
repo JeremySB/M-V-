@@ -22344,7 +22344,8 @@ Transform:
 --- !u!1 &2007535973
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 1130800087728478, guid: f728d8e5799eac644afc33d80fb1753d,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
@@ -22359,7 +22360,8 @@ GameObject:
 --- !u!4 &2007535974
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 4668306359932386, guid: f728d8e5799eac644afc33d80fb1753d,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2007535973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}

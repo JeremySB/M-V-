@@ -75,7 +75,7 @@ public class MenuManager : MonoBehaviour {
             string message;
             if (gameOverScreen && beatLastTime)
             {
-                message = "Congratulations, you beat the record time!\nNew record time: ";
+                message = "Congratulations, you set the record time!\nNew record time: ";
             }
             else if (gameOverScreen && !beatLastTime && playerTime > 0)
             {
