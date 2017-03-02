@@ -76,11 +76,11 @@ public class ShipControl : MonoBehaviour {
         float deltaZ = Input.GetAxis("Roll") * sensitivityRoll;
 
 		if ((forwardThrust > 0 || sideThrust != 0 || vertThrust != 0 || deltaZ != 0)) {
-			if(!sources[1].isPlaying)
-			sources [1].Play ();
+			if(!sources[3].isPlaying)
+			sources [3].Play ();
 		}
-		else if (sources [1].isPlaying)
-			sources [1].Pause ();
+		else if (sources [3].isPlaying)
+			sources [3].Pause ();
 
         rb.AddForce(forwardThrust * transform.forward);
         rb.AddForce(sideThrust * transform.right);
@@ -94,7 +94,8 @@ public class ShipControl : MonoBehaviour {
         if (rb.velocity.magnitude < 0.1f) rb.velocity = Vector3.zero;
     }
 	void OnCollisionEnter(Collision col){
-		if(!sources[0].isPlaying)
-			sources [0].Play ();
+        int toPlay = Random.Range(0, 3);
+		if(!sources[toPlay].isPlaying)
+			sources [toPlay].Play ();
 	}
 }
