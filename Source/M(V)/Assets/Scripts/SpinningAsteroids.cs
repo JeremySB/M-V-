@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpinningAsteroids : MonoBehaviour {
-    public float spd;
+    public float spd = 0.6f;
 
 
 	// Use this for initialization
 	void Start () {
-        spd = 0.6f;
+        
 	}
 	
 	// Update is called once per frame

@@ -7447,7 +7447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16905472fd88354f9d95418d15d8c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 0
+  spd: 0.7
 --- !u!4 &677168805
 Transform:
   m_ObjectHideFlags: 0
@@ -13289,7 +13289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16905472fd88354f9d95418d15d8c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 0
+  spd: 0.8
 --- !u!4 &1161748008
 Transform:
   m_ObjectHideFlags: 0
