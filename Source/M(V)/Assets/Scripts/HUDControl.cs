@@ -35,41 +35,43 @@ public class HUDControl : MonoBehaviour {
             float x = screenpos.x;
             float y = screenpos.y;
             float offset = 40;
-            float angle = Mathf.Atan2(y, x);
+            //float angle = Mathf.Atan2(y, x);
+            //float angle = Mathf.Atan2(screenpos.y-(Screen.height/2), screenpos.x - (Screen.width/2));
             if (screenpos.z < 0)
             {
                 screenpos = -screenpos;
+                y = offset;
             }
-
+            float angle = Mathf.Atan2(screenpos.y - (Screen.height / 2), screenpos.x - (Screen.width / 2));
             if (screenpos.x > Screen.width)
             {
                 x = Screen.width - offset;
-                arrow.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             if (screenpos.x < 0)
             {
                 x = offset;
-                // angle += 90 * Mathf.Deg2Rad;
-                arrow.transform.rotation = Quaternion.Euler(0, 0, 180);
+                //angle += 90 * Mathf.Deg2Rad;
+                //arrow.transform.rotation = Quaternion.Euler(0, 0, 180);
             }
 
             if (screenpos.y > Screen.height)
             {
                 y = Screen.height - offset;
-                arrow.transform.rotation = Quaternion.Euler(0, 0, 90);
+                //arrow.transform.rotation = Quaternion.Euler(0, 0, 90);
             }
             if (screenpos.y < 0)
             {
                 y = offset;
-                // angle -= 90 * Mathf.Deg2Rad;
-                arrow.transform.rotation = Quaternion.Euler(0, 0, -90);
+                //angle -= 90 * Mathf.Deg2Rad;
+                //arrow.transform.rotation = Quaternion.Euler(0, 0, -90);
             }
-            arrow.transform.position = new Vector3(x, y, 0);
+            arrow.transform.position = new Vector3(Mathf.Abs(x), Mathf.Abs(y), 0);
             //if (arrow.transform.position.y == 40 || arrow.transform.position.x == 40)
             //{
             //    angle += 90 * Mathf.Deg2Rad;
             //}
-            //arrow.transform.localRotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
+            //angle = Mathf.Atan2(y, x);
+            arrow.transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
         }
         //end offscreen indicator
         if (timer >= 0)
