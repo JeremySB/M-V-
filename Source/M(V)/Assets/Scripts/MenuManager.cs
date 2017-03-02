@@ -58,6 +58,7 @@ public class MenuManager : MonoBehaviour {
 
     private void ShowMenu()
     {
+        Input.ResetInputAxes();
         menuShown = true;
         hud.SetActive(false);
         Time.timeScale = 0.0f;

@@ -38,7 +38,11 @@ public class ShipControl : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (menu.IsMenuShown) return;
+        if (menu.IsMenuShown)
+        {
+            sources[3].Pause();
+            return;
+        };
 
         /*
         * Rotations
